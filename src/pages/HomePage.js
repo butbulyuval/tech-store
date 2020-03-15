@@ -1,7 +1,14 @@
 import React from 'react';
+import {ProductConsumer} from "../context";
 
 export default function HomePage() {
     return(
-        <h1>This is Home page</h1>
+        <><ProductConsumer>
+                {value=>{
+                    console.log(value);
+                    return<h1>Hello from HomePage</h1>;
+                }}
+            </ProductConsumer>
+        </>
     )
 }
